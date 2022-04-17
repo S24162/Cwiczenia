@@ -1,2 +1,4 @@
 # Cwiczenia
-11c_S24162_eugene
+11c
+S24162
+Eugene Grakovitch
