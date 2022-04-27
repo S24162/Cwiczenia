@@ -1,6 +1,4 @@
-package Gienek.Cw1.Zad7;
-
-import Gienek.Cw1.Zad6.Zad6;
+package Cw1.Zad7;
 
 import java.util.Scanner;
 
