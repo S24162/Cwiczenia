@@ -2,6 +2,7 @@ package Cw2.Zad5;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Person {
     private String name,surname;
@@ -44,7 +45,8 @@ public class Person {
         System.out.println();
         System.out.println("PublishBook");
         Book name = new Book();
-        String a="Beavis do America";
+        Scanner sc=new Scanner(System.in);
+        String a= sc.nextLine();
         name.setName(a);
         name.getListOfAuthor().add(this);
         name.getListOfAuthor().forEach(author -> System.out.println(author.name));
