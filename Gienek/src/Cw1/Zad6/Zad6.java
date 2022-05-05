@@ -1,4 +1,4 @@
-package Gienek.Cw1.Zad6;
+package Cw1.Zad6;
 
 import java.util.Random;
 

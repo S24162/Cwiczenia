@@ -1,4 +1,4 @@
-package Gienek.Cw1.Zad5;
+package Cw1.Zad5;
 
 public class Zad5 {
 

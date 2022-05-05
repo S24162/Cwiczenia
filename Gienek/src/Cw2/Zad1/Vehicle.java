@@ -16,12 +16,12 @@ public class Vehicle {
     private Brand brand;
     private Insurance insurance;
 
-    public Vehicle(String name, LocalDate creationDate, int wheel1, int wheel2, Brand brand, Insurance insurance) {
-        setName(name);
+    public Vehicle() {
+        setName("lol");
         setCreationDate(creationDate);
         this.wheels = new ArrayList<>();
-        addWheels(wheel1);
-        addWheels(wheel2);
+        addWheels(1);
+        addWheels(1);
         setBrand(brand);
         setInsurance(insurance);
         extent.add(this);
