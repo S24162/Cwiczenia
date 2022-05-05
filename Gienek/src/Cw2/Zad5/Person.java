@@ -41,17 +41,16 @@ public class Person {
         return year;
     }
 
-    public void PublishBook (){
+    public void PublishBook (String bookName){
         System.out.println();
         System.out.println("PublishBook");
         Book name = new Book();
-        Scanner sc=new Scanner(System.in);
-        String a= sc.nextLine();
-        name.setName(a);
+        name.setName(bookName);
         name.getListOfAuthor().add(this);
-        name.getListOfAuthor().forEach(author -> System.out.println(author.name));
+        name.getListOfAuthor().forEach(author -> System.out.println(author.name +" "));
         listOfBooks.add(name);
-        listOfBooks.forEach(book -> System.out.println(book.getName()));
+        name.setID();
+        listOfBooks.forEach(book -> System.out.println(book.getName() +" "+ book.getID()));
     }
 
     public void personDate(){

@@ -32,6 +32,7 @@ public class Main {
         Cornholio.getAdress().setFlat(1);
 
         Book Zaratustra=new Book();
+        Nietzsche.getListOfBooks().add(Zaratustra);
         Zaratustra.setName("Thus Spoke Zarathustra");
         Zaratustra.setID();
         Zaratustra.setGenre(Genre.Fantasy);
@@ -39,6 +40,7 @@ public class Main {
         Zaratustra.setPublishDate(2000,12,12);
 
         Book Nihilism=new Book();
+        Nietzsche.getListOfBooks().add(Nihilism);
         Nihilism.setName("Existential nihilism");
         Nihilism.setID();
         Nihilism.setGenre(Genre.Fantasy);
@@ -50,8 +52,12 @@ public class Main {
         Zaratustra.borrowBook(Cornholio);
         Nihilism.borrowBook(Cornholio);
         Zaratustra.placeBack();
-        Cornholio.PublishBook();
-        Cornholio.PublishBook();
+        Nietzsche.PublishBook("fPrograming");
+        Nietzsche.PublishBook("uPrograming");
+        System.out.println("ИТОГО : ");
+        Cornholio.getListOfBooks().forEach(book -> System.out.println(book.getName()));
+        System.out.println("А теперь еще  : ");
+        Nietzsche.PublishBook("cPrograming");
 
 
     }

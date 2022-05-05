@@ -13,7 +13,6 @@ public class Book {
     private LocalDate publishDate;
     private int borrowCount;
     private boolean isAvailable=true;
-
     private Person borrower;
 
     private ArrayList<Person> listOfAuthor=new ArrayList<>();
