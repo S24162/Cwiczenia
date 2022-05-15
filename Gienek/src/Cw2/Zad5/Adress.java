@@ -32,6 +32,15 @@ public class Adress {
         this.flat= sc.nextInt();
     }
 
+    public void setAdress (String country,String city, String street,int house,int flat){
+        this.country= country;
+        this.city= city;
+        this.street= street;
+        this.house= house;
+        this.flat= flat;
+
+    }
+
     public void adressDate(Person person){
         System.out.println(person.getSurname());
         System.out.println(country + " " +city + " st. " + street + " " + house + "/" + flat); }

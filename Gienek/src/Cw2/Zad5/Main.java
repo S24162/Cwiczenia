@@ -15,11 +15,7 @@ public class Main {
         Nietzsche.setPersonName("Friedrich");
         Nietzsche.setPersonSurname("Nietzsche");
         Nietzsche.setDateOfBirth(LocalDate.of(1834,12,12));
-        Nietzsche.getAdress().setCountry("Germany");
-        Nietzsche.getAdress().setCity("Bavaria");
-        Nietzsche.getAdress().setStreet("Plagues");
-        Nietzsche.getAdress().setHouse(12);
-        Nietzsche.getAdress().setFlat(3);
+        Nietzsche.getAdress().setAdress("Germani","Bavaria","Plagues",12,3);
 
         Person Cornholio=new Person();
         Cornholio.setPersonName("Holy");
@@ -51,14 +47,17 @@ public class Main {
 
         Zaratustra.borrowBook(Cornholio);
         Nihilism.borrowBook(Cornholio);
+
         Zaratustra.placeBack();
-        Nietzsche.PublishBook("fPrograming");
-        Nietzsche.PublishBook("uPrograming");
+
+        Nietzsche.PublishBook("Programing1");
+        Nietzsche.PublishBook("Programing2");
+
         System.out.println("ИТОГО : ");
         Cornholio.getListOfBooks().forEach(book -> System.out.println(book.getName()));
-        System.out.println("А теперь еще  : ");
-        Nietzsche.PublishBook("cPrograming");
 
+        Nietzsche.getListOfBooks().forEach(book -> System.out.println(book.getName()));
+        System.out.println(Nietzsche.getListOfBooks().get(3).getName());
 
     }
 }
