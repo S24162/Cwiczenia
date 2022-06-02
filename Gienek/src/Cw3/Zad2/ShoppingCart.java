@@ -1,32 +1,41 @@
 package Cw3.Zad2;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.UUID;
 
-public class ShoppingCart {
-    private String id= String.valueOf(UUID.randomUUID());
-    private ArrayList<Products> currentCartList=new ArrayList<>();
 
-    public String getId() {
-        return id;
-    }
-    public ArrayList<Products> getCurrentCartList (){
-        return  currentCartList;
-    }
+public class ShoppingCart implements Cloneable{
 
-    public void infoCurrentCartList(){
-        System.out.println(" Current cart list : ");
-        currentCartList.forEach(Products -> System.out.println(Products.getName() +" | Qty : "+ Products.getQuantity()) );
+    private int id=licznik;
+    private static int licznik = LocalDate.now().getDayOfYear()*1000;
 
-    }
+    private ArrayList<Products> currentCartList = new ArrayList<>();
 
-    public double totalPrice(){
+//getters and setters of variables
 
-        return 0;
-    }
-    public int totalDeliveryTime(){
-        return 0;
+    public int getId() {        return id;    }
+    public static void setLicznik() {licznik++;}
+
+    public ArrayList<Products> getCurrentCartList() {        return currentCartList;    }
+
+    //class methods
+
+
+    public int totalDeliveryTime(Storage storage){
+        return (Storage.calcDeliveryTime(currentCartList,storage.getProductsList()));
     }
 
-    public void Sell(){}
+    public void Sell(Storage name){
+        for(int i=0;i<currentCartList.size();i++) {
+            for (int j=0; j<name.getProductsList().size();j++) {
+                if (currentCartList.get(i).getName().equals(name.getProductsList().get(j).getName())) {
+                    currentCartList.get(i).Sell(currentCartList.get(i).getQuantityAll(),name.getProductsList().get(j));
+                }
+            }
+        }
+    }
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }
