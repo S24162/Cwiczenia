@@ -20,7 +20,6 @@ public class Main {
         Person facet1=new Person("Ukrainian","Zły",50000, 300000);
         Person facet2=new Person("Moskal", "Głupi", 1300000, 150000);
 
-
 // Operatons
 
         facet1.MakeOrder(StorageName.Howitzer_M777,70,storage);
@@ -29,7 +28,6 @@ public class Main {
         //facet1.MakeOrder(StorageName.shell_M982,300,storage);
 
         facet2.MakeOrder(StorageName.Howitzer_M777,90,storage);
-
 
 // Testing out
 
@@ -55,6 +53,9 @@ public class Main {
 
         storage.infoProductList();
         facet1.infoCurrentCart(storage);
+
+        System.out.println(facet1.getClientHistory().get(0).getQuantityAll());
+
 
         //storage.infoProductList();
         //facet1.getMoneyOnCard();

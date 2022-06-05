@@ -9,6 +9,7 @@ class Person {
     private double moneyInCash , moneyOnCard;
 
     private ShoppingCart currentCart =new ShoppingCart();
+    private ArrayList<Products> clientHistory = new ArrayList<>();
 
     public Person ( String name, String surname, double moneyInCash, double moneyOnCard) {
         this.name=name; this.surname=surname;this.moneyInCash=moneyInCash; this.moneyOnCard=moneyOnCard;
@@ -23,6 +24,8 @@ class Person {
 
     public void setMoneyOnCard(double moneyOnCard) {        this.moneyOnCard = moneyOnCard;    }
     public double getMoneyOnCard(){ System.out.println( name +" balance is : "+moneyOnCard); return moneyOnCard;  }
+
+    public ArrayList<Products> getClientHistory() {        return clientHistory;    }
 
 //class methods
 
@@ -106,8 +109,11 @@ class Person {
         System.out.println(name + " | Money on card: " + moneyOnCard + "  Money in cash: " + moneyInCash);
         System.out.println();
     }
+
     public void AddToHistory(){
-        System.out.println("I do not know how to do copy or clone or something like ' historia zamówień Person ' and do not have enough time for self home self-studying. :( ");
+
+        System.out.println("Send to history");
+        clientHistory.addAll(currentCart.getCurrentCartList());
         currentCart.getCurrentCartList().clear();
     }
 }
