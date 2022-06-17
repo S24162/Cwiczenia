@@ -14,6 +14,8 @@ public interface Fun {
         }
         Collections.sort(list);
 
+        if (alpha==1)
+            System.out.println(list.get(0));
         return list.get(0);
     }
 }
