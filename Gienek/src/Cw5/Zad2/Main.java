@@ -332,6 +332,7 @@ class Main {
         Ingredient nemiroff = Alcohol.alcoholCreate(LiquidName.Nemiroff);
         Ingredient putinka = Alcohol.alcoholCreate(LiquidName.Putinka);
 
+
 //        roseFlower.info();
 //        roseRoot.info();
 //        phirnaFlower.info();
