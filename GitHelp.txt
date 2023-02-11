@@ -1,0 +1,54 @@
+Git Bash (initially it was UNIX)
+
+Ctrl + Shift +"+" zoom in/out
+clear | Clear console.
+pwd - show directory path ( like cd )
+ls - shown file list in current directory
+	"ls -l" - in list;
+	"ls-a" with hidden files
+	"ls-la" list with hidden files
+cd - change directory ( d: OR d:/git OR git/work)
+	cd .. - will move the user up one directory (cd ../.. - down for 2 levels)
+	"cd" -    home directory
+	"cd -" - to the previous directory
+	"cd  ~" - must press SPACE at end to this simbol shown. Go to home directory.cd
+Press TAB one time - will write end by himself
+Press TAB two times - will work like "ls"
+--help (after some command) - will display help
+git config --list  : show actual config of Git
+git config --global ( user.email \ user.name \ etc. ) - setting default account indentity 
+	Omitting --global to set parameters to this local repo
+
+git init - make in current directory .git/ ( make this directory 'master' )
+ touch Test.txt - make a new file Test.txt
+git add test.txt  ( --all \"git add ." - all files) - add files to Staging Area
+git commit -m "tytle of commit" -  move files next to Git Repository with Tytle of commit (-m "Tytle")
+	git commit - move files next to Git Repository with opening default redactor (txt or nitepad++)
+	to write Tytle to this commit (it needs to be setted )
+git reset (file.txt or .) - move last commit to stage area. 
+git checkout (test.txt OR " ."-all files) - restore working directory version to staging directory version(
+	or commited if commit = stage) (vice versa "git add")
+git restore  --stage . -restore staging area  to commited version 
+rm - deleting from working directory
+git rm - deleting from working and staging area
+git log | show all commits history ; -- oneline | short form with start of control summ and message;
+	-- patch | shows changes in every commit; --stat | History with statistical changes (number of
+	changed,  inserted, deleted files ); --author (Egrakovitch) - commit history of this author only;
+	It possible to complicate requests |( git log --author="Egrakovitch" --oneline --stat)
+	git log -3 | shows last 3 commit
+	git log --graph( --oneline) - graphical history
+	git log --online -- Test.txt - commit history related with this file
+
+
+
+
+VIM:
+vim file.txt : opening file in vim redactor
+At star at read only. To redacting we must press 'i' , at the end press ESC - to close session of editing
+:q - close redactor without saving, :wq - write and qute ( must start writing with ":")
+
+Change home dir :
+1. Click the start menu, start typing “Environment” and then select “Edit environment variables for user account”.
+2. Under user variables click New and then set the name of the variable to be HOME and the value to be whatever
+folder path you want to be your new default.
+3. Save it, and close Git Bash if it’s open.
